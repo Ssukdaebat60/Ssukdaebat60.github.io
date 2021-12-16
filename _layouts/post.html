@@ -20,6 +20,7 @@
             {%- include toc-date.html -%}
 
             <div class="book-body">
+                
                 {%- include body.html -%}
 
                 {% if page.previous %}
@@ -38,7 +39,13 @@
                     </a>
                 {% endif %}
             </div>
-
+        <script src="https://utteranc.es/client.js"
+        repo="Ssukdaebat60/Ssukdaebat60.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
             <script>
             var gitbook = gitbook || [];
             gitbook.push(function() {
@@ -48,12 +55,6 @@
         </div>
 
         {%- include footer.html -%}
-        <script src="https://utteranc.es/client.js"
-        repo="Ssukdaebat60/Ssukdaebat60.github.io"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
+
     </body>
 </html>
