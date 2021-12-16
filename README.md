@@ -15,7 +15,8 @@ Git의 원격 repo를 로컬에 복사하여 연결한다.
 
 - - -
 3) Jekyll   
->```
+>
+```
 gem install bundler jekyll   
 jekyll new myblog   
 cd myblog   
@@ -41,7 +42,8 @@ bundle exec jekyll serve
 6) post
 > _post 파일에 yyyy-mm-dd-title.md 형식으로 마크다운 파일을 만들고 내용을 작성한다.  
 
->```
+>
+```
 ---
 layout : post
 title : FirstPost
