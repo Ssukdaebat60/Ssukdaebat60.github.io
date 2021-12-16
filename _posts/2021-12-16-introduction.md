@@ -1,3 +1,9 @@
+---
+layout : post
+title : introduction
+comments : true
+---
+
 # Ssukdaebat60
 
 * name : Sung Jae Seong
