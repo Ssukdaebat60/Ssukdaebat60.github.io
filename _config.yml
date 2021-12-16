@@ -25,6 +25,8 @@ tipue_search:
   exclude:
     files: [index.md, search.html]
 
+disqus_shortname: https-ssukdaebat60-github-io
+
 # markdown render engine.
 markdown:         kramdown
 kramdown:
