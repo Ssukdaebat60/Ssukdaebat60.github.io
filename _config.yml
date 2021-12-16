@@ -1,10 +1,10 @@
 # Configurations
-title:            Jekyll Gitbook
-longtitle:        Jekyll Gitbook
-author:           HE Tao
-email:            sighingnow@gmail.com
+title:            Ssukdaebat
+longtitle:        Eureka! Ssukdaebat
+author:           JS Sung
+email:            imt025@kookmin.ac.kr
 description: >
-  Build Jekyll site with the GitBook style.
+  Let's make next Eureka!
 
 version:          1.0
 gitbook_version:  3.2.3
