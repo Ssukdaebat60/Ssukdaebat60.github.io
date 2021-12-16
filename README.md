@@ -1,65 +1,76 @@
-# Jekyll GitBook
+My Git Blog
+========================================
+----------------------------------------------------------
+1)  github.io
+ >Git에서 username.github.io의 형식으로 repository를 생성한다.   
 
+그러면 인터넷 주소창에 username.github.io를 입력하면 블로그로 이동할 수 있게 된다.   
+이는 복잡한 과정없이 블로그를 개설할 수 있게 해준다.
 
+- - -
+2)  Remote to Local
+> ```git clone username.github.io```  
 
-## Demo
+Git의 원격 repo를 로컬에 복사하여 연결한다.
 
-Live demo on Github Pages: [https://sighingnow.github.io/jekyll-gitbook](https://sighingnow.github.io/jekyll-gitbook)
+- - -
+3) Jekyll   
+>```
+gem install bundler jekyll   
+jekyll new myblog   
+cd myblog   
+bundle exec jekyll serve
+```
+정적 웹사이트를 쉽게 만들어 주는 Jekyll을 이용한다.   
+위와 같이 Jekyll을 다운 받고 실행 시키면 웹사이트를 쉽게 관리할 수 있다.
 
-[![Jekyll Themes](https://img.shields.io/badge/featured%20on-JekyllThemes-red.svg)](https://jekyll-themes.com/jekyll-gitbook/)
+ - - -
+4) Theme
+> 원하는 테마를 git에서 찾아 로컬의 repo에 덮어쓴다. 
+ 
+모든 설정이 다운 받은 테마에 맞춰진다.  
+**_post 파일에 미리 쓴 문서가 있다면 _post는 덮어쓰지 않는다.**
 
-## Why Jekyll with GitBook
+- - -
+5) configuration
+> _config.yml에서 url와 baseurl이 설정되어 있다면  본인 블로그의 주소로 넣어야 테마가 제대로 적용된다.  
+(공란으로 만들어도 되는 경우가 있음)
 
-GitBook is an amazing frontend style to present and organize contents (such as book chapters
-and blogs) on Web. The typical to deploy GitBook at [Github Pages][1]
-is building HTML files locally and then push to Github repository, usually to the `gh-pages`
-branch. It's quite annoying to repeat such workload and make it hard for people do version
-control via git for when there are generated HTML files to be staged in and out.
+블로그 제목이나 기타 다른 정보들도 본인의 블로그에 맞게 수정한다.
+- - -
+6) post
+> _post 파일에 yyyy-mm-dd-title.md 형식으로 마크다운 파일을 만들고 내용을 작성한다.  
 
-This theme takes style definition out of generated GitBook site and provided the template
-for Jekyll to rendering markdown documents to HTML, thus the whole site can be deployed
-to [Github Pages][1] without generating and uploading HTML bundle every time when there are
-changes to the original repo.
+>```
+---
+layout : post
+title : FirstPost
+ .
+ .
+ .
+---
+```
+다음과 같은 파일의 헤더 부분을 추가해서 포스트의 정보를 설정할 수 있다.
 
-## How to Get Started
+- - -
+7) Markdown
+> 포스트는 마크다운을 이용해서 작성할 수 있다.  
 
-This theme can be used just as other [Jekyll themes][1].
+[사용법](https://gist.github.com/ihoneymon/652be052a0727ad59601)
 
-[Fork][3] this repository and add your markdown posts to the `_posts` folder.
-
-### Deploy Locally with Jekyll Serve
-
-This theme can be ran locally using Ruby and Gemfiles.
-
-[Testing your GitHub Pages site locally with Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll) - GitHub
-
-## Full-text search
-
-The jekyll-gitbook theme support a "Search" page that enables visitors to search contents
-from the whole site. The search functionality is powered by [jekyll-tipue-search][5] can you
-can try it from:
-
-[https://sighingnow.github.io/jekyll-gitbook/search/?q=generated](https://sighingnow.github.io/jekyll-gitbook/search/?q=generated)
-
-## How to generate TOC
-
-The jekyll-gitbook theme leverages [jekyll-toc][4] to generate the *Contents* for the page.
-The TOC feature is not enabled by default. To use the TOC feature, modify the TOC
-configuration in `_config.yml`:
-
-```yaml
-toc:
-    enabled: true
+- - -
+8) Add Comments
+> Utterances를 이용해서 댓글을 추가한다.[사용법](https://velog.io/@outstandingboy/Github-%EB%B8%94%EB%A1%9C%EA%B7%B8%EC%97%90-%EB%8C%93%EA%B8%80-%EA%B8%B0%EB%8A%A5-%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0-ft.-Utterances)  
+그리고 각 포스트의 헤더 부분에 comments : true를 추가한다.
+```
+---
+layout : post
+title : FirstPost
+comments : true
+---
 ```
 
-## License
-
-This work is open sourced under the Apache License, Version 2.0.
-
-Copyright 2019 Tao He.
-
-[1]: https://pages.github.com
-[2]: https://pages.github.com/themes
-[3]: https://github.com/sighingnow/jekyll-gitbook/fork
-[4]: https://github.com/allejo/jekyll-toc
-[5]: https://github.com/jekylltools/jekyll-tipue-search
+성공적으로 댓글창이 생성된다.  
+![댓글창](/comments.png)  
+그러나 다크모드는 적용되지 않는다.  
+(블로그를 다크모드로 바꿔도 댓글창은 그대로 하얀 바탕이다.)
