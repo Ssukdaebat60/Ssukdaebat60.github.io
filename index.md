@@ -1,7 +1,6 @@
 ---
 layout: home
 ---
- ### I am...
 
   * majoring in Computer Science *(junior)*
   * interested in Computer Vision
